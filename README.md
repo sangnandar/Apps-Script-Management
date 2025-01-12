@@ -71,7 +71,8 @@ Enable the following API in your GCP project:
   'Updater'!A2:E
   ```
 
-Sheets layout [image]
+Sheets layout:
+![image](https://github.com/user-attachments/assets/1fe96c11-4c9e-4692-9875-ea126a97a240)
 
 ## Usage
 1. Access the **Custom Menu** located in the toolbar.
@@ -87,4 +88,5 @@ At the current state, there are no functions/methods to get *ScriptID* from *Spr
 Update client's file already run in paralel.
 
 ## Future enchancements
-This project can be enchanced to include updates for deployment 
+- For scenario where provided solution has webapp deployment, include re-deployment after committing update.
+- For scenario where each client has unique variables, include `PropertiesService` setup using `scripts.run` method.
