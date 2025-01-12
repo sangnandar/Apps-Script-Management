@@ -70,8 +70,8 @@ function createNew()
     // copy sheets from master spreadsheet
     const masterSheets = SpreadsheetApp.openById(MASTER_FILE_ID).getSheets();
     for (const [index, sheet] of masterSheets.entries()) {
-      //  in case the first sheet in master spreadsheet is named 'Sheet1'
-      if (index === 0 && sheet.getSheetName() === 'Sheet1') {
+      //  in case there's sheet in master file named 'Sheet1'
+      if (sheet.getSheetName() === 'Sheet1') {
         newSpreadsheet.getSheetById(0).setName('to be removed');
       }
       sheet.copyTo(newSpreadsheet).setName(sheet.getSheetName());
