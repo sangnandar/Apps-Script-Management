@@ -72,6 +72,7 @@ Enable the following API in your GCP project:
   ```
 
 Sheets layout:
+
 ![image](https://github.com/user-attachments/assets/1fe96c11-4c9e-4692-9875-ea126a97a240)
 
 ## Usage
