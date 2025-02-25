@@ -5,7 +5,7 @@ function onOpen()
       .addItem('Create new', 'createNew')
       .addSeparator()
       .addItem('Update', 'update')
-      .addItem('Delete', 'delete_')
+      .addItem('Delete', 'deleteX')
     .addToUi();
 }
 

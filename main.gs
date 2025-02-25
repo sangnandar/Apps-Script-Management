@@ -226,10 +226,11 @@ function updateScriptFile(scriptIds)
 }
 
 /**
- * Delete selected clients. Uses `delete_` because `delete` is a reserved word.
+ * Delete selected clients.
+ * Uses `deleteX` because `delete` and `delete_` are reserved words.
  * @returns {void}
  */
-function delete_()
+function deleteX()
 {
   const sheetName = 'Updater';
   const sheet = ss.getSheetByName(sheetName);
@@ -244,8 +245,8 @@ function delete_()
     return;
   }
 
-  const files = sheet.getRange('C2:C' + lastRow).getRichTextValues();
-  const checkboxes = sheet.getRange('E2:E' + lastRow).getValues();
+  const files = sheet.getRange(`C2:C${lastRow}`).getRichTextValues();
+  const checkboxes = sheet.getRange(`E2:E${lastRow}`).getValues();
   checkboxes.forEach((item, index) => {
     if (item[0]) {
       // delete from sheet
@@ -258,7 +259,7 @@ function delete_()
   });
 
   lastRow = sheet.getLastRow(); // lastRow has changed
-  sheet.getRange('E1:E' + lastRow).setValues(
+  sheet.getRange(`E1:E${lastRow}`).setValues(
     Array(lastRow).fill([false])
   );
 }

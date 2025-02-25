@@ -1,5 +1,5 @@
 /**
- * Global variables and helper functions
+ * GLOBAL VARIABLES AND HELPER FUNCTIONS
  */
 
 var ui; // return null if called from script editor
